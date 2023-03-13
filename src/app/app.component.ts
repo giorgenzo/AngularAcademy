@@ -1,5 +1,6 @@
 import { Component, EventEmitter } from '@angular/core';
 import { FilmHttpService } from './providers/film-http.service';
+import { Film, MovieResult } from './model/film.class';
 
 @Component({
   selector: 'app-root',

@@ -1,7 +1,18 @@
 .example-card {
-  height: 200px;
-  margin-left: 50px;
+  height: 500px;
+  width: auto;
   background-color: lightgrey;
   color: black;
   text-align: center;
+  justify-content: center;
+}
+
+.example-header-image {
+  background-size: cover;
+  height: 250px;
+  width: auto;
+}
+
+.mat-input {
+  padding-left: 40%;
 }

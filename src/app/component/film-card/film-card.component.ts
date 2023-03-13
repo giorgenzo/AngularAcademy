@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
+import { MovieResult } from 'src/app/model/film.class';
 
 @Component({
   selector: 'app-film-card',

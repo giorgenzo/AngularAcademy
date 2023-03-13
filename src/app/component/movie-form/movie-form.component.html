@@ -1,16 +1,24 @@
 <div>
-  <input matInput type="text" placeholder="Inserire nome del film" #search>
-  <button style="margin-bottom: 2%;"(click)="onSearch(search.value)" class="fa-solid fa-plus me-2">Cerca</button>
-  <div *ngIf="listMovie" style="display: flex;">
+  <mat-form-field class="mat-input">
+    <mat-label>Nome del film</mat-label>
+      <input matInput type="text" #search>
+  </mat-form-field>
+  <button style="margin-bottom: 15px;" mat-flat-button (click)="onSearch(search.value)" class="fa-solid fa-plus me-2">CERCA</button>
+  <div *ngIf="listMovie" style="display: grid; column-gap: 1.5rem; row-gap: 1.5rem; grid-template-columns: repeat(4, 1fr)">
     <mat-card *ngFor="let movie of listMovie" class="example-card">
       <mat-card-header>
-        <mat-card-subtitle>Media Voto: {{movie.vote_average}}</mat-card-subtitle>
         <mat-card-title>{{movie.title.toLocaleUpperCase()}}</mat-card-title>
       </mat-card-header>
+      <img mat-card-image class="example-header-image" src="https://image.tmdb.org/t/p/original{{movie?.poster_path}}" alt="Poster Film">
       <mat-card-content>
-        <p>Uscita: {{movie.release_date}}</p>
+        <p>Uscita: {{movie.release_date | date: 'dd/MM/yyyy'}}</p>
+        <p>Lingua originale: {{movie.original_language}}</p>
         <p>Popolarita: {{movie.popularity}}</p>
+        <p>Media Voto: {{movie.vote_average}}</p>
       </mat-card-content>
+      <mat-card-actions style="align-items: center;">
+        <button mat-flat-button (click)="onDetail()" class="fa-solid fa-plus me-2">INFO</button>
+      </mat-card-actions>
     </mat-card>
   </div>
 </div>

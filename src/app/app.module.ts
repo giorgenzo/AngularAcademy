@@ -6,6 +6,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+
 
 import { NgModule } from '@angular/core';
 
@@ -31,7 +33,8 @@ import { FilmCardComponent } from './component/film-card/film-card.component';
     MatCheckboxModule,
     MatSidenavModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
