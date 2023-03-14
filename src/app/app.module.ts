@@ -15,13 +15,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MovieFormComponent } from './component/movie-form/movie-form.component';
-import { FilmCardComponent } from './component/film-card/film-card.component';
+import { FilmCardComponent } from './component/detail-card/detail-card.component';
+import { MovieCardComponent } from './component/movie-card/movie-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieFormComponent,
-    FilmCardComponent
+    FilmCardComponent,
+    MovieCardComponent
   ],
   imports: [
     AppRoutingModule,

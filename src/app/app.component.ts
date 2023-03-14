@@ -1,6 +1,6 @@
-import { Component, EventEmitter } from '@angular/core';
-import { FilmHttpService } from './providers/film-http.service';
-import { Film, MovieResult } from './model/film.class';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { MovieResult } from './model/film.class';
 
 @Component({
   selector: 'app-root',
@@ -9,4 +9,12 @@ import { Film, MovieResult } from './model/film.class';
 })
 export class AppComponent {
   title = 'MOVIE-DB';
+
+  listMovie: Array<MovieResult> | undefined;
+
+  constructor(private readonly router: Router) { }
+
+  navigateTo(route: string) {
+    this.router.navigateByUrl(route);
+  }
 }

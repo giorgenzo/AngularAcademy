@@ -1,0 +1,12 @@
+<div>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>{{movie.title.toLocaleUpperCase()}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image class="example-header-image" src="https://image.tmdb.org/t/p/original{{movie.poster_path}}"
+      alt="Poster Film">
+    <mat-card-actions>
+      <button mat-flat-button (click)="onDetail(movie.id)">INFO</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
