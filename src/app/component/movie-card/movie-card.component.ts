@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { MovieResult } from 'src/app/model/film.class';
+import { MovieResult } from 'src/app/model/film.type';
 
 @Component({
   selector: 'app-movie-card',
@@ -8,7 +8,7 @@ import { MovieResult } from 'src/app/model/film.class';
   styleUrls: ['./movie-card.component.scss']
 })
 export class MovieCardComponent {
-  @Input() movie!: MovieResult;
+  @Input() movie!: Array<MovieResult>;
 
   constructor(private router: Router) { }
 

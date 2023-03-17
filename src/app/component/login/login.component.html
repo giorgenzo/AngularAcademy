@@ -1,0 +1,17 @@
+<h1>Login</h1>
+
+<form class="loginForm" #login="ngForm">
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput type="email" name="email">
+  </mat-form-field>
+  <br />
+  <mat-form-field appearance="fill">
+    <mat-label>Password</mat-label>
+    <input matInput type="password" name="password">
+  </mat-form-field>
+  <br />
+  <button mat-flat-button style="margin-bottom: 10px;" (click)="onLogin(login)">Login</button>
+  <br />
+  <button mat-flat-button style="margin-bottom: 10px;" (click)="onRegister()">Registrati</button>
+</form>

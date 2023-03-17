@@ -14,21 +14,33 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MovieFormComponent } from './component/movie-form/movie-form.component';
-import { FilmCardComponent } from './component/detail-card/detail-card.component';
+import { MovieFormComponent } from './component/search-form/movie-form.component';
+import { FilmCardComponent } from './component/detail-card-film/detail-card.component';
 import { MovieCardComponent } from './component/movie-card/movie-card.component';
+import { HomepageComponent } from './component/homepage/homepage.component';
+import { RegistrazioneComponent } from './component/registrazione/registrazione.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './component/login/login.component';
+import { SerieTvComponent } from './component/serie-tv/serie-tv.component';
+import { PersonComponent } from './component/person/person.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieFormComponent,
     FilmCardComponent,
-    MovieCardComponent
+    MovieCardComponent,
+    HomepageComponent,
+    RegistrazioneComponent,
+    LoginComponent,
+    SerieTvComponent,
+    PersonComponent,
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule,
     HttpClientModule,
     MatCardModule,
     MatSelectModule,
@@ -37,6 +49,7 @@ import { MovieCardComponent } from './component/movie-card/movie-card.component'
     MatButtonModule,
     MatInputModule,
     MatIconModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,13 @@
+<mat-card class="card" *ngIf="movieChoice">
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title>{{movieChoice.original_title | uppercase}}</mat-card-title>
+      <mat-card-subtitle>{{movieChoice.release_date | date}}</mat-card-subtitle>
+      <mat-card-subtitle>{{movieChoice.vote_average}}</mat-card-subtitle>
+      <img mat-card-xl-image src="https://image.tmdb.org/t/p/original{{movieChoice.poster_path}}">
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-content>
+    {{movieChoice.overview}}
+  </mat-card-content>
+</mat-card>

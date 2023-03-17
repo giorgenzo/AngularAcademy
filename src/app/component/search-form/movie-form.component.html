@@ -1,0 +1,31 @@
+<div class="movieForm">
+  <h1 [innerText]="title"></h1>
+  <mat-form-field class="movieForm">
+    <mat-label *ngIf="mode==='film'">Nome del film</mat-label>
+    <mat-label *ngIf="mode==='tv'">Nome della serie tv</mat-label>
+    <mat-label *ngIf="mode==='person'">Nome dell'attore/attrice</mat-label>
+    <input matInput type="text" #search>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Scegli</mat-label>
+    <mat-select>
+      <mat-option [value]="mode==='film'">Film</mat-option>
+      <mat-option [value]="mode==='tv'">Serie Tv</mat-option>
+      <mat-option [value]="mode==='person'">Attore/Attrici</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br />
+  <button mat-flat-button (click)="onSearch(search.value, mode)">CERCA</button>
+</div>
+
+<div>
+  <app-movie-card *ngIf="mode==='film'"
+    style="display: grid; column-gap: 1.5rem; row-gap: 1.5rem; grid-template-columns: repeat(4, 1fr)"
+    [movie]="movie"></app-movie-card>
+  <app-serie-tv *ngIf="mode==='tv'"
+    style="display: grid; column-gap: 1.5rem; row-gap: 1.5rem; grid-template-columns: repeat(4, 1fr)" [tv]="tv">
+  </app-serie-tv>
+  <app-person *ngIf="mode==='person'"
+    style="display: grid; column-gap: 1.5rem; row-gap: 1.5rem; grid-template-columns: repeat(4, 1fr)" [person]="person">
+  </app-person>
+</div>

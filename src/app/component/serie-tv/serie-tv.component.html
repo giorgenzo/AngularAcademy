@@ -1,0 +1,6 @@
+<mat-card class="card" *ngFor="let tv of tv">
+  <mat-card-header>
+    <mat-card-title>{{tv.title | uppercase}}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image class="image" src="https://image.tmdb.org/t/p/original{{tv.poster_path}}" alt="Poster Film">
+</mat-card>

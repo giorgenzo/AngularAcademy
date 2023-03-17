@@ -1,0 +1,6 @@
+<mat-card class="card" *ngFor="let person of person">
+  <mat-card-header>
+    <mat-card-title>{{person.original_title}}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image class="image" src="https://image.tmdb.org/t/p/original{{person.poster_path}}" alt="Poster Film">
+</mat-card>
